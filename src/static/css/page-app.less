@@ -1,0 +1,221 @@
+.word-wrap {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+#appview {
+    .position {
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+        text-align: center;
+        margin-top: 5rem;
+
+        .position-btn {
+            color: #fff;
+            text-decoration: none;
+
+            &:before {
+                content: '';
+                background: url(/static/imgs/location-logo.png) no-repeat;
+                background-size: 100%;
+                width: 1.4rem;
+                height: 1.6rem;
+                display: inline-block;
+                margin-right: 1rem;
+                vertical-align: bottom;
+            }
+            &:after {
+                content: '';
+                background: url(/static/imgs/arrow-right.png) no-repeat;
+                background-size: 100%;
+                width: .35rem;
+                height: .7rem;
+                display: inline-block;
+                margin-left: 1rem;
+                vertical-align: middle;
+            }
+        }
+    }
+    .shop-list {
+        background-color: #fff;
+        margin: 1.5rem .6rem;
+        border-radius: 2px;
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        flex-direction: column;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        //min-height: 69vh;
+
+        .list-info {
+            //width: 15.5rem;
+            margin-top: 65px;
+            margin-bottom: 65px;
+            //margin-left: auto;
+            //margin-right: auto;
+            text-align: center;
+
+            .list-logo {
+                margin: auto;
+                width: 7rem;
+                height: 7rem;
+                background: url(/static/imgs/list-location-no.png) no-repeat;
+                background-size: 100%;
+            }
+            .list-noshop-logo {
+                .list-logo;
+                background-image: url(/static/imgs/list-noshop.png);
+            }
+            .list-text {
+                color: #3d3d3d;
+                font-size: 1.3rem;
+                line-height: 2.2rem;
+                margin-top: 1rem;
+            }
+            .list-handler{
+                display: -webkit-flex;
+                padding: 2rem 2.5rem;
+
+                height: 4rem;
+                line-height: 4rem;
+            }
+            .list-search {
+                -webkit-flex: 1;
+                display: inline-block;
+                max-width: 154px;
+                font-size: 1.4rem;
+                border: 0.1rem solid #d9ddea;
+                text-decoration: none;
+                border-radius: 2px;
+                color: #3d3d3d;
+                background: -webkit-linear-gradient(#f9f7f7, #edf3f5); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(#f9f7f7, #edf3f5); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(#f9f7f7, #edf3f5); /* Firefox 3.6 - 15 */
+                background: linear-gradient(#f9f7f7, #edf3f5); /* 标准的语法 */
+                &:first-child{
+                    margin-left: auto;
+                }
+                &:last-child{
+                    margin-right: auto;
+                }
+            }
+            .list-separator{
+                display: inline-block;
+                margin: 0 13px;
+            }
+        }
+    }
+    .shop-item {
+        display: -moz-box;
+        display: -webkit-box;
+        display: box;
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 1px solid #edebeb;
+        text-decoration: none;
+
+        .shop-img-container {
+            width: 8.5rem;
+            height: 6.5rem;
+
+            .shop-img {
+                width: 8.5rem;
+                height: 6.5rem;
+            }
+        }
+        .shop-detail {
+            -moz-box-flex: 1.0; /* Firefox */
+            -webkit-box-flex: 1.0; /* Safari 和 Chrome */
+            box-flex: 1.0;
+            margin-left: 10px;
+
+            .shop-name {
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+                color: #000;
+                margin-top: .4rem;
+                .word-wrap;
+            }
+            .shop-price {
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+                margin-top: .9rem;
+                margin-bottom: .8rem;
+                .word-wrap;
+
+                & span {
+                    display: inline-block;
+                    color: #999;
+
+                    &:not(:last-child) {
+                        border-right: 1px solid #999;
+                        margin-right: 4px;
+                        padding-right: 4px;
+                    }
+                }
+            }
+            .shop-mark {
+                font-size: 1rem;
+                height: 1.4rem;
+                line-height: 1.4rem;
+                .word-wrap;
+
+                .shop-activity {
+                    padding: 0 .3rem;
+                    margin-right: .4rem;
+                    background-color: #fe9404;
+                    color: #fff;
+                    display: inline-block;
+                }
+                .shop-dist {
+                    font-size: 1.2rem;
+                    color: #999;
+                    float: right;
+                }
+            }
+        }
+    }
+    .load-more, .no-more {
+        line-height: 4.4rem;
+        height: 4.4rem;
+        font-size: 1.2rem;
+        color: #999;
+        text-align: center;
+    }
+    .footer {
+        height: 1.8rem;
+        margin-bottom: 1.5rem;
+        background: url(/static/imgs/zhidahao-logo.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+.loader {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    margin: -20px 0 0 -20px;
+    left: 50%;
+    top: 50%;
+    z-index: 99999;
+    -webkit-animation: rotate .6s infinite linear;
+    animation: rotate .6s infinite linear;
+    border-left: 4px solid rgba(47, 60, 87, .15);
+    border-right: 4px solid rgba(47, 60, 87, .15);
+    border-bottom: 4px solid rgba(47, 60, 87, .15);
+    border-top: 4px solid rgba(47, 60, 87, .75);
+    border-radius: 100%;
+}
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}

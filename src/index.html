@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@便利店</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="static/css/page.less">
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>-->
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=9602da11481ea186960a8fa2744f7a6a" charset="UTF-8"></script>
+
+    </head>
+    <body>
+        <header class="header">
+            <a href="javascript:history.go(-1);" class='back-btn'></a>
+            <span class="title">@便利店</span>
+        </header>
+        <div class="body">
+            <div id="appview">
+                <div class="position">
+                    <a href="#search" class="position-btn">
+                        <span class="position-text">加载中</span>
+                    </a>
+                </div>
+                <div class="shop-list">
+                </div>
+                <footer class="footer"></footer>
+            </div>
+            <div id="searchview">
+                <div class="searchbar">
+                    <span class="search-logo"></span>
+                    <input id="suggestId" class="search-input" type="text" placeholder="输入地址寻找附近超市" />
+                </div>
+                <div class="location">
+                    <a class="location-btn">点击定位当前地址</a>
+                    <div class="search-history"></div>
+                </div>
+
+            </div>
+        </div>
+        <script src="static/lib/zepto/zepto.min.js"></script>
+        <script src="static/lib/fastclick/lib/fastclick.js"></script>
+        <script src="static/lib/routie/dist/routie.min.js"></script>
+        <script src="pages/indexPage.js"></script>
+        <script src="pages/searchPage.js"></script>
+        <script src="pages/router.js"></script>
+    </body>
+</html>
