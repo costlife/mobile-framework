@@ -18,6 +18,13 @@ fis.config.set('pack', {
 });
 
 
+/**
+ *  图片合并
+ */
+fis.config.set('settings.spriter.csssprites', {
+    scale: 0.5
+})
+
 /*
  *   插件名: fis-postpackager-simple
  *   功能: 插件提供的静态资源打包合并的功能

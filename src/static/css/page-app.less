@@ -17,20 +17,18 @@
 
             &:before {
                 content: '';
-                background: url(/static/imgs/location-logo.png) no-repeat;
-                background-size: 100%;
-                width: 1.4rem;
-                height: 1.6rem;
+                background: url(/static/imgs/location-logo.png?__sprite) no-repeat;
+                width: 15px;
+                height: 17px;
                 display: inline-block;
                 margin-right: 1rem;
                 vertical-align: bottom;
             }
             &:after {
                 content: '';
-                background: url(/static/imgs/arrow-right.png) no-repeat;
-                background-size: 100%;
-                width: .35rem;
-                height: .7rem;
+                background: url(/static/imgs/arrow-right.png?__sprite) no-repeat;
+                width: 4px;
+                height: 7px;
                 display: inline-block;
                 margin-left: 1rem;
                 vertical-align: middle;
@@ -59,14 +57,13 @@
 
             .list-logo {
                 margin: auto;
-                width: 7rem;
-                height: 7rem;
-                background: url(/static/imgs/list-location-no.png) no-repeat;
-                background-size: 100%;
+                width: 70px;
+                height: 70px;
+                background: url(/static/imgs/list-location-no.png?__sprite) no-repeat;
             }
             .list-noshop-logo {
                 .list-logo;
-                background-image: url(/static/imgs/list-noshop.png);
+                background: url(/static/imgs/list-noshop.png?__sprite) no-repeat;
             }
             .list-text {
                 color: #3d3d3d;
@@ -74,10 +71,9 @@
                 line-height: 2.2rem;
                 margin-top: 1rem;
             }
-            .list-handler{
+            .list-handler {
                 display: -webkit-flex;
                 padding: 2rem 2.5rem;
-
                 height: 4rem;
                 line-height: 4rem;
             }
@@ -93,15 +89,19 @@
                 background: -webkit-linear-gradient(#f9f7f7, #edf3f5); /* Safari 5.1 - 6.0 */
                 background: -o-linear-gradient(#f9f7f7, #edf3f5); /* Opera 11.1 - 12.0 */
                 background: -moz-linear-gradient(#f9f7f7, #edf3f5); /* Firefox 3.6 - 15 */
-                background: linear-gradient(#f9f7f7, #edf3f5); /* 标准的语法 */
-                &:first-child{
+                background: linear-gradient(#f9f7f7, #edf3f5);
+
+                /* 标准的语法 */
+                &:first-child {
                     margin-left: auto;
+                    border: 1px solid #d9ddea;
                 }
-                &:last-child{
+                &:last-child {
                     margin-right: auto;
+                    border: 0.5px solid #d9ddea;
                 }
             }
-            .list-separator{
+            .list-separator {
                 display: inline-block;
                 margin: 0 13px;
             }
@@ -185,11 +185,10 @@
         text-align: center;
     }
     .footer {
-        height: 1.8rem;
-        margin-bottom: 1.5rem;
-        background: url(/static/imgs/zhidahao-logo.png) no-repeat;
-        background-size: contain;
-        background-position: center;
+            height: 18px;
+            margin: 0px auto 15px;
+            width: 56px;
+            background: url(/static/imgs/zhidahao-logo.png?__sprite) no-repeat;
     }
 }
 .loader {
